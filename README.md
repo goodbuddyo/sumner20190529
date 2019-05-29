@@ -1,7 +1,6 @@
+# README
 # sumner20190529
-
-
-Assignment: Make the bottom row 2-col and Add images that resize to 5 remaining media-box areas.
+# Assignment: Make the bottom row 2-col and Add images that resize to 5 remaining media-box areas.
 
 Hi Lisa,
 
@@ -54,8 +53,28 @@ tags to credit the artists
   }
 --------------------------
 
+
+Some minor tweaks: 
+the padding-bottom of the media-boxes seems a little tight.
+I added 8 pixels with an inline <style> tag
+
+.media-box-content { padding: 20px 12px 18px 12px; }
+
+Also, using display: flex should make all the media-boxes the same height
+  
+.tb-padding-10 { display:flex; flex-wrap:wrap; }
+.tb-padding-10 .columns { display:flex;  }
+.media-content-box {display:flex; }
+
+
+-------------------------------
+
 That should do it. 
 The only style changes needed are in step 7 & 8 and the inline style change in step 5. 
+
+---------------------------
+
+
 
 As a side note, this page showed a 404 error and a Depracated warning in the console, which also appears on the live site: https://byonewtown.org/
 
@@ -73,5 +92,6 @@ I'll check in with you tomorrow, or please call or email me if you have any ques
 
 Thanks!
 Sean O'
+203 561 5797
 
 
