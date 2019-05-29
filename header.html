@@ -1,0 +1,55 @@
+
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script>
+      var nav = responsiveNav(".nav-collapse", { 
+      animate: true, 
+      transition: 284, 
+      label: "Menu", 
+      insert: "after", 
+      customToggle: "hamburger-stack", 
+      closeOnNavClick: false, 
+      openPos: "relative", 
+      navActiveClass: "js-nav-active", 
+      jsClass: "js"
+      });
+
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it  
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown')) {
+
+    var dropdowns = document.getElementsByClassName("nav-drop");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+
+<header> <!--- BEGIN HEADER --->
+			 
+  <section class="head-section bg-light-blue">
+    <div class="container">
+      <nav class="head-nav-mobile"><span id="hamburger-stack"><a href=""><i class="fa fa-bars"></i></a></span>
+      </nav>
+      <div class="head-logo"><a href="index.html"><img src="img/BYO-Newtown-Logo.png"></a></div><div class="head-calls-to-action"><a class="head-buyer-sign-up" href="#">Resources</a><a  href="#">About Us</a></div>
+    </div>    
+  </section>
+			
+  <!--- nav-collapse referenced in javascript --->
+  <nav class="nav-collapse">
+    <ul id="mobile-menu">
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+
+</header>

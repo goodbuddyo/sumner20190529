@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--- Basic Page Needs  --->
+<meta charset="utf-8">
+<TITLE>Closeout Central Framework</TITLE>
+<META NAME="Description" CONTENT="#Attributes.Description#" />
+<META NAME="Keywords" CONTENT="#Attributes.Keywords#" />
+<!--- Mobile Specific Metas --->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--- HTML5shiv.js enables use of HTML5 sectioning elements in legacy IE and provides  basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x. --->
+<!--- Respond.min.js enables responsive web designs in browsers that don't support CSS3 Media Queries - in particular, Internet Explorer 8 and under.--->
+<!---[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif] --->
+        
+<!--- FONTS --->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,800' rel='stylesheet' type='text/css'>
+        
+  <!--- AWESOME FONT icons --->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
+<!--- CSS --->
+<link rel="stylesheet" href="../css/reset-skeleton.css">
+<!--- <link rel="stylesheet" href="css/framework.css"> --->
+<link rel="stylesheet" href="css/slick-plus-theme.css">
+<link rel="stylesheet" href="css/responsive-nav.css">
+
+<!--- JAVASCRIPT --->
+<script src="js/modernizr-2.6.2.min.js"></script>
+<script src="js/responsive-nav.min.js"></script>
+
+<!--- FAVICON --->
+<link rel="icon" type="image/png" href="img/favicon.ico" />
+
+<!--- Google Webmaster Tools Code --->
+<!--- meta name="verify-v1" content="JMo3faWul2by+dOvRINZxwDkPKkM8a3N7BBiSLCUehE=" / --->
+
+<!--- JQUERY --->
+<script src="js/jquery-v3.2.1.min.js"></script>
+  
+<style type="text/css">
+  * {color:#444; font-family:serif;}
+  .left-225.columns {width: 22.5%;} /* (225/1000) x 100 */
+  .right-767.columns {width: 76.7%} /* (767 / 1000) x 100 */
+  .container {border-style:solid; border-width:3px; border-color:#fa8ac1; margin-bottom:10px;}
+  .row {border-style:solid; border-width:3px; border-color:#7fb342;}
+  .column, .columns {border-style:solid; border-width:3px; border-color:orange; background-color:#f7f5f5;}
+  h1 {font-size: 2em; margin: 0.67em 0;}
+  h2 {font-size: 1.6em; margin: 0.67em 0; border-bottom:dotted 1px #666;}
+  p, pre {margin-top:14px; line-height:1.4em;}
+  pre {color:blue; white-space:pre-wrap;}
+  .blue {color:blue;}
+  ul, ol {margin-top: .8em; margin-left:2em; text-indent:-1.5em;}
+  .content {width:85%; max-width:860px; margin-left:auto; margin-right:auto;}
+  li {margin-bottom:10px;}
+  a {
+  color: #1EAEDB; }
+  a:hover {
+  color: #0FA0CE; }
+
+</style>
+
+<!--- FAVICON --->
+<link rel="icon" type="image/png" href="images/favicon.png" />
+
+<!--- JQUERY --->
+<script src="wc-js/jquery-1.11.2.min.js"></script>
+<script src="wc-js/modernizr-2.6.2.min.js"></script>
+
+<!--- Goolgle Webmaster Tools Code --->
+<!--- insert here when page goes live --->
+
+</head>
+
+<!--- ************************************* BODY *************************************** --->
+
+<div class="content">
+<h1>Guide to Skeleton 2.0.4</h1>
+<p>Skeleton is a simple and lightweight CSS style sheet. It provides a set of classes that can be used to define the overall grid structure (rows and columns) in which to put content on web pages. The "Using Skeleton" section of this document explains how to use the classes in the Skeleton grid system. The "Customizing Skeleton" section discusses the classes in detail and reviews how the "custom" version, in use here, was customized. Skeleton can be downloaded for free at <a href="http://getskeleton.com">getskeleton.com</a>.</p>
+
+<h2>Using Skeleton</h2>
+<p>There are three main structural classes in Skeleton: <b>.container</b>, <b>.row</b>, and <b>.columns</b>. These classes are nested in such a way as to form a system of rows and columns in which to place content. It is best to create structure using these classes in neutral div tags, and to put the actual content in semantic tags nested inside of the structural classes. However you can use these classes in any block-level tag if it makes more sense to do it that way in a particular situation.</p>
+<p>The <b>.container</b> class is meant to be applied to the outer div and forms the outer container of the content. It holds the rows and columns that form the grid structure. Within the .container div there are one or more <b>.row</b> divs that form the rows. Each row is divided into 12 equal-width columns that can be used in any combination using the twelve <b>.column</b> classes:
+<ul>
+   <li>.one.columns</li>
+   <li>.two.columns</li>
+   <li>.three.columns</li>
+   <li>.four.columns</li>
+   <li>.five.columns</li>
+   <li>.six.columns</li>
+   <li>.seven.columns</li>
+   <li>.eight.columns</li>
+   <li>.nine.columns</li>
+   <li>.ten.columns</li>
+   <li>.eleven.columns</li>
+   <li>.twelve.columns</li>
+</ul>
+</p>
+<p>Below is an example of how to set up the grid structure. In this example there is one outer container and one row containing three 4-column width columns.</p>
+<pre>
+&lt;div class="container"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="four columns"&gt;
+         &lt;p&gt;Four columns"&lt/p&gt;
+      &lt;/div&gt;
+      &lt;div class="four columns"&gt;
+         &lt;p&gt;Four columns"&lt/p&gt;
+      &lt;/div&gt;
+      &lt;div class="four columns"&gt;
+         &lt;p&gt;Four columns"&lt/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt; &lt;!-- close row div --&gt;
+&lt;/div&gt;    &lt;!-- close container div --&gt;
+</pre>
+<p>Shown below is what the above code looks like. For instructional purposes we are outlining the <b>containers in pink</b>, the <b>rows in green</b>, and the <b>columns in orange</b> so you can see them. Notice there is an outer container, one row, and three columns, each 4-column units wide. Also notice that all columns except the first one have a small left margin that forms a gutter between the columns.</p>
+<br>
+</div>
+
+<div class="container">
+   <div class="row">
+      <div class="four columns">
+        Four columns
+      </div>
+      <div class="four columns">
+        Four columns
+      </div>
+      <div class="four columns">
+        Four columns
+      </div>
+   </div>
+</div>
+
+<div class="content">
+<p>
+</p>
+<br>
+</div>
+
+<div class="container">
+   Container
+   <div class="row">
+      Row
+   </div>
+   <div class="row">
+      <div class="one columns">
+        Column
+      </div>
+   </div>
+   </div>
+</div>
+
+<div class="content">
+<p>Columns can be used in any combination adding up to at most 12 columns. The example below shows many combinations of columns. If you go over twelve columns, the columns will wrap, as shown in the last row.</p>
+<br>
+</div> <!--- close outer div --->
+
+
+<!--- .container is main centered wrapper --->
+<div class="container">
+  <!--- .row should be the immediate child of a .container, and is meant to contain .columns --->
+  <div class="row">
+    <!--- columns should be the immediate child of a .row --->
+    <!--- the number of columns in a row must be <= 12 --->
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+    <div class="one columns">one</div>
+  </div>
+
+  <div class="row">
+    <div class="two columns">two</div>
+    <div class="two columns">two</div>
+    <div class="two columns">two</div>
+    <div class="two columns">two</div>
+    <div class="two columns">two</div>
+    <div class="two columns">two</div>
+  </div>
+  
+  <div class="row">
+    <div class="three columns">three</div>
+    <div class="three columns">three</div>
+    <div class="three columns">three</div>
+    <div class="three columns">three</div>
+  </div>
+  
+  <div class="row">
+    <div class="four columns">four</div>
+    <div class="four columns">four</div>
+    <div class="four columns">four</div>
+  </div>
+  
+   <div class="row">
+    <div class="one columns">one</div>
+    <div class="eleven columns">eleven</div>
+  </div>
+  
+  <div class="row">
+    <div class="two columns">two</div>
+    <div class="ten columns">ten</div>
+  </div>
+  
+  <div class="row">
+    <div class="three columns">three</div>
+    <div class="nine columns">nine</div>
+  </div>
+  
+  <div class="row">
+    <div class="four columns">four</div>
+    <div class="eight columns">eight</div>
+  </div>
+  
+  <div class="row">
+    <div class="five columns">five</div>
+    <div class="seven columns">seven</div>
+  </div>
+  
+  <div class="row">
+    <div class="six columns">six</div>
+    <div class="six columns">six</div>
+  </div>
+  
+  <div class="row">
+    <div class="twelve columns">twelve</div>
+  </div>
+  
+  <div class="row">
+    <div class="one columns">one</div>
+    <div class="two columns">two</div>
+    <div class="three columns">three</div>
+    <div class="four columns">four</div>
+  </div>
+  
+  <div class="row">
+    <div class="one columns">one</div>
+    <div class="two columns">two</div>
+    <div class="three columns">three</div>
+    <div class="four columns">four</div>
+    <div class="one columns">one</div>
+    <div class="three columns">Oops. Can't fit 3 more.</div>
+  </div>
+</div>
+
+<div class="content">
+<p>It's just that simple. There are three more column-width classes that let you define columns. They are <b>one-third.columns</b>, <b>two-thirds.columns</b>, and <b>.one-half.columns</b>.
+</p>
+<br>
+</div>
+
+<div class="container">
+  <!--- there are a few shorthand columns widths as well --->
+  <div class="row">
+    <div class="one-third columns">one-third</div>
+    <div class="two-thirds columns">two-thirds</div>
+  </div>
+  
+  <div class="row">
+    <div class="one-half columns">one-half</div>
+    <div class="one-half columns">one-half</div>
+  </div>
+</div>
+
+<div class="content">
+<p>Skeleton also comes with a set of classes that let you offset columns. There is one offset for every column-width up to eleven, plus one-third, two-thirds, and one-half. They look like this:
+<ul>
+  <li>.offset-by-one.columns</li>
+  <li>.offset-by-two.columns</li>
+  <li>.offset-by-three.columns</li>
+  <li>.offset-by-four.columns</li>
+  <li>.offset-by-five.columns</li>
+  <li>.offset-by-six.columns</li>
+  <li>.offset-by-seven.columns</li>
+  <li>.offset-by-eight.columns</li>
+  <li>.offset-by-nine.columns</li>
+  <li>.offset-by-ten.columns</li>
+  <li>.offset-by-eleven.columns</li>
+  <li>.offset-by-one-third.columns</li>
+  <li>.offset-by-two-thirds.columns</li>
+  <li>.offset-by-one-half.columns</li>
+</ul>
+</p>
+<br>
+<p>You use them by preceding the column class with the class representing the desired offset amount. The sum of columns plus offsets in a row must be less than or equal to 12. In the example below the first row is offset by one-column width, the second row by two, etc.
+</p><br>
+<pre>
+&lt;div class="container"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="offset-by-one eleven columns"&gt;
+         &lt;p&gt;Eleven columns offset by one&lt/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+   &lt;div class="row"&gt;
+      &lt;div class="offset-by-two ten columns"&gt;
+         &lt;p&gt;Ten columns offset by two&lt/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+   &lt;div class="row"&gt;
+      &lt;div class="offset-by-three nine columns"&gt;
+         &lt;p&gt;Nine columns offset by three&lt/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+   ETC.
+   
+   &lt;div class="row"&gt;
+      &lt;div class="offset-by-eleven one columns"&gt;
+         &lt;p&gt;One columns offset by eleven&lt/p&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+      
+   &lt;/div&gt; &lt;!-- close row div --&gt;
+&lt;/div&gt;    &lt;!-- close container div --&gt;
+</pre>
+<br>
+<p>Here is what each of the eleven column-widths look like with offsets before them.</p><br>
+</div>
+
+<div class="container">
+  <div class="row">
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-one eleven columns">Eleven columns offset by one</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-two ten columns">Ten columns offset by two</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-three nine columns">Nine columns offset by three</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-four eight columns">Eight columns offset by four</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-five seven columns">Seven columns offset by five</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-six six columns">Six columns offset by six</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-seven five columns">Five columns offset by seven</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-eight four columns">Four columns offset by eight</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-nine three columns">Three columns offset by nine</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-ten two columns">Two columns offset by ten</div>
+  </div>
+  
+  <div class="row">
+  	<div class="offset-by-eleven one columns">One columns offset by eleven</div>
+  </div>
+</div>
+
+<div class="content">
+<p>The example below shows that Skeleton offsets only work reliably when they offset the first column in a row. If the offset comes between columns, the gutter collapses and leaves a gap at the end of the row.</p><br>
+</div>
+
+<div class="container">
+<div class="row">
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  <div class="one columns">one</div><div class="one columns">one</div>
+  </div>
+  <div class="row">
+  	<div class="offset-by-one two columns">2 columns offset by 1</div>
+  	<div class="three columns">3 columns</div>
+  	<div class="five columns">5 columns</div>
+  </div>
+  <div class="row">
+  	<div class="one columns">1 column</div>
+  	<div class="two columns">2 columns</div>
+  	<div class="offset-by-two three columns">3 columns offset by 2</div>
+  	<div class="four columns">4 columns</div>
+  </div>
+</div>
+
+<div class="content">
+<p><b>Let's experiment with nesting.</b>
+<ul>
+<li>Can a container be nested in a column? YES. Not recommended.</li>
+<li>Can a container be nested in a row? YES. Not recommended.</li>
+<li>Can a row be nested in a column? YES. Recommended.</li>
+</p>
+<br>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="six columns">six</div><div class="six columns">six</div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+      <div class="container">
+        <div class="row">
+          <div class="six columns">This container is nested in a column. It has one row and two columns.
+          </div>
+          <div class="six columns">This is the second column in the nested container.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="six columns" style="height:auto;">Six columns. Experiment: Get column to fill height of container.</div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="six columns">
+      Row one. 2 Columns. No nesting.
+    </div>
+    <div class="six columns">
+      six
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="container">
+        <div class="row">
+          <div class="six columns">
+             Row two. Nested container with 1 row and 2 columns.</div>
+          <div class="six columns">
+             This is the second column in the nested container.</div>
+        </div>
+     </div>
+   
+   <div class="container">
+        <div class="row">
+          <div class="eight columns">
+             Still Row two. Nested container with 1 row and 2 different columns.
+          </div>
+          <div class="four columns">
+            Second column in the nested container.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="eight columns">
+    <p>This paragraph is the first child of the column. It is followed by a row with two columns.</p>
+      <div class="row">
+         <div class="six columns">Nested Row. Left six columns</div>
+         <div class="six columns">Nested Row. Right six columns</div>
+      </div>
+      <p>This is another paragraph in the column that follows the nested row above, and is followed by another nested row below.</p>
+       <div class="row">
+         <div class="seven columns">Nested Row. Left seven columns</div>
+         <div class="five columns">Nested Row. Right five columns</div>
+      </div>
+    </div> <!-- column -->
+    <div class="four columns">
+      four
+    </div>
+  </div>
+</div>
+
+<div class="content">
+<p><b>In addition to the grid, Skeleton comes with a few handy utility classes.</b>
+<ul>
+   <li>.u-full-width {width: 100%; box-sizing: border-box;}</li>
+   <li>.u-max-full-width {max-width: 100%; box-sizing: border-box;}</li>
+   <li>.u-pull-right {float: right;}</li>
+   <li>.u-pull-left {float: left;}</li>
+   <li>.u-cf {content: ""; display: table; clear: both; }</li>
+</ul>
+</p>
+
+<div class="container">
+  <div class="row">
+    <div class="six columns">
+       <img class="u-full-width" src="http://placehold.it/260x100?text=LOGO+260x100">
+    </div>
+    
+    <div class="six columns">
+      The image in the left column is using <b>class="u-full-width"</b>. This class scales the image to always take up 100% the width of its container. 
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="six columns">
+       <img class="u-max-full-width" src="http://placehold.it/260x100?text=LOGO+260x100">
+    </div>
+    
+    <div class="six columns">
+      The image in the left column is using <b>class="u-max-full-width"</b>. This class will allow the image to scale down if it's container is smaller than the original image size, but it won't scale up larger than the original width of the image.
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="twelve columns">
+       <img class="u-pull-right" src="http://placehold.it/260x100?text=LOGO+260x100">The image to the right is using <b>class="u-pull-right"</b>, causing the image to float right. It is not recommended to use the u-max-full-width class in conjunction with u-pull-left or u-pull-right.
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="twelve columns">
+       <img class="u-pull-left" src="http://placehold.it/260x100?text=LOGO+260x100">The image to the left is using <b>class="u-pull-left"</b>, causing the image to float left.
+    </div>
+  </div>
+  
+</div>
+
+<div class="content">
+<p>Notice that "max-width" creates a fluid image. The <b>"width"</b> attribute defines the width of specific element. The <b>"max-width"</b> attribute defines the maximum size the element is allow to have.</p>
+<p>For example, width:100% uses the parent's width to calculate current width value whereas max-width:100% use its own original width to calculate the maximum size. So, the image with width: 100% could be larger its original size (scaled base on its parent width). On the other hand, the image with max-width: 100% could be smaller but never be scaled larger its original size (maximum valid width = 100% x original width). That's why it's called fluid image.
+</p>
+
+<p><b>Skeleton is Mobile-first, and comes with media queries set up for five break points.</b>
+<ul>
+   <li>Larger than mobile -- &commat;media (min-width: 400px) {}</li>
+   <li>Larger than phablet -- &commat;media (min-width: 550px) {}</li>
+   <li>Larger than tablet -- &commat;media (min-width: 750px) {}</li>
+   <li>Larger than desktop -- &commat;media (min-width: 1000px) {}</li>
+   <li>Larger than Desktop HD -- &commat;media (min-width: 1200px) {}</li>
+</ul>
+<br>
+</div>
+
+<div class="content">
+<h2>Customizing Skeleton</h2>
+<p>Skeleton is meant to be a starting point that you can customize to your needs. In this section we look at the particular customization of Skeleton in use here.</p>
+<ol>
+  <li>
+    Original Skeleton assigns <b>box-sizing: border-box</b> to .container and .column separately. We combine them in to one rule and add .row. We also added the vendor prefixes for the box-sizing property as follows:
+    <pre>
+    .container, .row, .columns {
+      box-sizing: border-box;
+      /* add vendor prefixes for box-sizing */
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+    </pre>
+  </li>
+
+  <li>
+    We changed the overall size of the original Skeleton <b>.container</b> from 960px max-width with 20 pixels of left and right padding and 100% width, to 1000px max-width with zero padding and 98% width.
+  </li>
+
+  <li>
+    We changed the left-margin on <b>.columns</b> from 4% to .8%
+  </li>
+
+  <li>
+    The creators of Skeleton created a number of <b>.column</b> classes (singular of .columns) to make the singular columns, like .one and .one-third, grammatically correct. We eliminated all of the singular .column forms as we found them to unnecessarily complex and potentially confusing.
+  </li>
+  <li>
+    We added a rule to make .row 100% width: .row {width:100%;}
+  </li>
+  <li>
+    We removed all of the base styles included in Skeleton for HTML, H1-H6, BODY, P, A, UL, OL, LI, CODE, PRE, HR and the TABLE tags since all of these are handled in the reset and will be styled separately for our website in the main.css file.
+  </li>
+  <li>
+    We replaced the custom Button and Form styles in Skeleton with our own <a href="guide-forms.html">Form</a> and <a href="guide-buttons.html">Button</a> styles.
+  </li>
+  <li>
+    Skeleton column widths are percentage-based to make them fluid. Since we changed the overall width and padding of the .container class as well the width of the gaps between columns, we needed to recalculate the widths on all of the <b>.columns</b> classes. We show the formula for calculating column widths below, as well as how to create custom column widths combinations outside of the 12-column grid.
+  </li>
+</ol>
+
+<p>Overall width is based on number of columns (COLS), column width (COL-WIDTH), and gutter width (GUTTER-WIDTH). The formula is as follows:
+</p>
+  <pre>
+    WIDTH = (COLS * COL-WIDTH) + ((COLS - 1)) * GUTTER-WIDTH)
+  </pre>
+<p>In our case we have 12 columns, each column is 76 pixels wide, and the space between columns (gutter) is 8 pixels. Our formula looks like this:
+</p>
+  <pre>
+    1,000 pixels = (12 columns * 76 pixels) + (11 columns * 8 pixels)
+  </pre>
+<p>In order to be responsive, we convert pixels to percentages in our class rules. Each column is: <span class="blue">(76 pixels / 1,000 pixels) = 7.6%</span> of the total width. Likewise, the gutters are: <span class="blue">(8 pixels / 1,000 pixels) = .8%</span> of the total width. We used this to set the left margin on the .columns class to .8%.
+</p>
+<p>To calculate the column width in percentages for each of the column-width classes, use the following calculation:
+</p>
+<pre>
+  ((76 * COLUMNS) + (8 * (COLUMNS - 1)) /1,000) / 100
+</pre>
+<p>If you want to create a different set of columns, beyond the 12 equal-width columns in the grid systems, you can use these formulas for any combination of pixel widths you need. </p>
+<p><b>For example</b>, let's say we want a two column section where the left column is 225 pixels with our 8 pixel gap in between it and the right column which takes the remaining 767 pxels. We will name our columns .left-225 and .right-767. Here are the styles and percentages we will create to produce these columns. Note that these columns can only be used with each other in any given row.
+</p>
+
+<pre>
+  .left-225.columns {width: 22.5%;} /* (225/1000) x 100 */
+  .right-767.columns {width: 76.7%} /* (767/1000) x 100 */
+</pre>
+<br>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="left-225 columns">Left Column 225 pixels or 22.5%</div>
+    <div class="right-767 columns">Right Column 767 pixels or 76.7%</div>
+  </div>
+</div>
+<br><br>
+</body>
+</html>

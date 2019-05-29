@@ -1,0 +1,178 @@
+
+
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script>
+      var nav = responsiveNav(".nav-collapse", { 
+      animate: true, 
+      transition: 284, 
+      label: "Menu", 
+      insert: "after", 
+      customToggle: "hamburger-stack", 
+      closeOnNavClick: false, 
+      openPos: "relative", 
+      navActiveClass: "js-nav-active", 
+      jsClass: "js"
+      });
+
+/* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it  
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown')) {
+
+    var dropdowns = document.getElementsByClassName("nav-drop");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	for (i=0;i<5;i++) {
+		$('#top-banner-slider > div').each(function() {
+			ms=Math.floor((Math.random() * 3) + 1);
+			if (ms%3==0) { $(this).prependTo(this.parentNode);}
+			else if (ms%3==1) { $(this).appendTo(this.parentNode);}
+			//ms=(ms-(ms%3))/3
+		});
+	}
+	$("#top-banner-slider").slick({
+		infinite: true,
+		slidesToShow: 5,
+		  responsive: [
+			{
+			  breakpoint: 950,
+			  settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				arrows: true				
+			  }
+			},
+			{
+			  breakpoint: 775,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				arrows: true
+			  }
+			},
+			{
+			  breakpoint: 600,
+			  settings: {			  
+				slidesToShow: 2,
+				slidesToScroll: 2,
+				centerPadding: '6px',				
+				arrows: true
+			  }
+			}
+		  ]
+	});
+});
+</script>
+
+
+<header> <!--- BEGIN HEADER --->
+			
+  <!--- HEADER SECTION 1 ---> 
+  <section class="head-section-1 bg-dark-blue">
+    <div class="container">
+      <nav class="head-nav-mobile"><span id="hamburger-stack"><a href=""><i class="fa fa-bars"></i></a></span></nav><div class="head-logo"><a href="index.html"><img src="img/cc-logo-2018-fb9c2e.png"></a></div><div class="u-spacer"></div><div class="head-calls-to-action"><a class="head-buyer-sign-up" href="daily-closeout-alert.html">Get Free Alerts</a><a  href="seller-postlot.html">Post Your Lots</a></div>
+    </div>    
+  </section>
+			
+  <!--- HEADER SECTION 2. Desktop Nav, Mobile Calls-to-Action ---> 
+  <section class="bg-light-blue">
+    <div class="container">
+      <div class="row">
+        <div class="eleven columns">   
+          <nav class="head-nav-desktop">
+          <ul>
+          <!--- ul class="desktop-menu" --->
+            <li><a href="seller-directory.html">Seller Directory</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="addseller.html">Add Your Company</a></li>
+            <li><a href="http://www.wholesalecentral.com">WholesaleCentral.com</a></li>
+          </ul>  
+          </nav>
+        </div>
+      
+        <div class="one columns">
+          <div class="head-login">
+          <a href="seller-login.html">Login</a>
+          </div>
+        </div>
+      
+        <div class="twelve columns head-calls-to-action-mobile">
+        <a class="head-buyer-sign-up-mobile" href="daily-closeout-alert.html"><p class="maintext">Get Free Alerts</p></a><a class="head-supplier-sign-up-mobile" href="seller-postlot.html"><p class="maintext">Post Your Lots</p></a>
+        </div>    
+      </div>
+    </div> 
+  </section>
+  
+  <!--- nav-collapse referenced in javascript --->
+  <nav class="nav-collapse">
+    <ul id="mobile-menu">
+            <li><a href="seller-directory.html">Seller Directory</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="addseller.html">Add Your Company</a></li>
+            <li><a href="http://www.wholesalecentral.com">Wholesale Central</a></li>
+  <!--- Links shown after log in --->
+            <li><a href="seller-admin.html">Account Manager</a></li>
+            <li><a href="seller-postlot.html">Post Lot</a></li>
+            <li><a href="#">Log Out</a></li>
+    </ul>
+  </nav>
+  
+  <!--- HEADER SECTION 3. Seller Admin Nav ---> 
+  <!--- cfif Len( Seller.ID ) --->
+
+  <!--- /cfif --->
+ 
+ <!--- Closeout Search Form --> 
+  <form class="flex-form closeout-search">
+	<div class="container">
+		<h1 class="white">Find Closeouts &amp; Liquidations</h1><select class="bord-lightest-blue">
+  			<option value="" selected="selected">Select Product Category</option>
+  			<option value="volvo">Apparel</option>
+  			<option value="saab">Art</option>
+  			<option value="mercedes">Artificial Flowers</option>
+  			<option value="audi">As Seen On TV</option>
+		</select><input class="bord-lightest-blue" type="text" placeholder="Keyword" name="keyword">
+		<button class="button btn-medium btn-yellow-gold" href=""><i class="fa fa-search" aria-hidden="true"></i><span>Search</span></button>
+	</div>
+</form><!--- end closeout-search form --->
+  
+			
+  <!--- TOP BANNERS --->
+  <section class="container">
+    <div class="row">
+    <div class="twelve columns">
+      <section class="top-banners-block row">
+        <div id="top-banner-slider" class="twelve columns">
+          <!--- cfquery name="getSlidingBanners" datasource="#application.datasource#" --->
+            <div><a href="#"><img src="img/coa-demo-180x100.jpg" alt=""></a></div>
+            <div><a href="#"><img src="img/cotoa-demo-180x100.jpg"  alt=""></a></div>
+            <div><a href="#"><img src="img/country-club-demo-180x100.jpg" alt=""></a></div>
+            <div><a href="#"><img src="img/direct-liquidation-demo-180x100.jpg" alt=""></a></div>
+            <div><a href="#"><img src="img/fortune-fashion-demo-180x100.jpg" alt=""></a></div>
+            <div><a href="#"><img src="img/four-seasons-demo-180x100.jpg"  alt=""></a></div>
+            <div><a href="#"><img src="img/selini-demo-180x100.jpg" alt=""></a></div>
+            <div><a href="#"><img src="img/wcd-demo-180x100.jpg" alt=""></a></div>
+            <div><a href="#"><img src="img/western-express-demo-180x100.jpg" alt=""></a></div>               
+            <div><a href="#"><img src="img/wfs-demo-180x100.jpg" alt=""></a></div>  
+          <!--- /cfloop --->
+        </div>
+      </section>
+    </div>
+    </div>
+  </section>
+
+  </header>
