@@ -6,6 +6,8 @@ Hi Lisa,
 
 Here's a rundown on the updates:
 
+<!-- 
+
 1 - remove the last <div class="four columns"> ... </div>
 
 2 - change the other 2 divs in that row to "six columns"
@@ -87,6 +89,8 @@ https://developers.google.com/web/updates/2012/01/Getting-Rid-of-Synchronous-XHR
 https://x443.wordpress.com/2012/12/01/why-you-should-use-xmlhttprequest-asynchronously/
 https://github.com/jquery/jquery/issues/3975
 http://www.codecheese.com/2017/03/fix-synchronous-xmlhttprequest-on-the-main-thread-is-deprecated/
+
+ -->
 
 I'll check in with you tomorrow, or please call or email me if you have any questions or concerns. 
 
