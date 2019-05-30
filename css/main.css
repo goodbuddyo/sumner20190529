@@ -47,8 +47,8 @@ body {
   color: #505050;
 }
 
-div {
-  border-top: red;
+.tb-padding-10 div {
+  border-top: solid 2px brown;
 }
 
 /* Link colors
@@ -143,7 +143,7 @@ strong {
 /* Smaller than mobile */
 @media (max-width: 550px) {
 
-  div {border-top: solid 2px black;}
+  .tb-padding-10 div {border-top: solid 2px black;}
 
   .mobile-center {
     text-align: center;
@@ -342,7 +342,7 @@ strong {
 /* MEDIA QUERIES - head section */
 @media (max-width: 800px) {
 
-  div {border-top: solid 2px red;}
+  .tb-padding-10 div {border-top: solid 2px red;}
   .head-nav-mobile {
     display: inline-block;
     vertical-align: middle;
@@ -367,7 +367,7 @@ strong {
 /* MEDIA QUERIES - header section 2 */
 @media (min-width: 801px) {
 
-  div {border-top: solid 2px green;}
+  .tb-padding-10 div {border-top: solid 2px green;}
 
 
   .nav-collapse {
@@ -376,7 +376,7 @@ strong {
 }
 @media (max-width: 800px) {
 
-  div {border-top: solid 2px orange;}
+  .tb-padding-10 div {border-top: solid 2px orange;}
 
   #mobile-menu {
     padding-bottom: 0px;
@@ -407,7 +407,7 @@ strong {
 /* Smaller than mobile */
 @media (max-width: 550px) {
 
-  div {border-top: solid 2px pink;}
+  .tb-padding-10 div {border-top: solid 2px pink;}
   .hero-text-column {
     padding: 6px 12px 12px 12px;
   }
@@ -449,7 +449,7 @@ strong {
 
 @media (max-width: 550px) {
 
-  div {border-top: solid 2px yellow;}
+  .tb-padding-10 div {border-top: solid 2px yellow;}
   .media-box {
     margin-bottom: 10px;
   }
