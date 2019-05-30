@@ -45,6 +45,10 @@ body {
 	color: #505050;
 }
 
+
+div {border-top: red; }
+
+
 /* Link colors
 -------------------------------------------------- */
 a:link { color: #0197ca; text-decoration: none;}
@@ -109,9 +113,7 @@ strong {font-weight: 600;}
 @media (max-width: 550px) {
    .mobile-center {text-align:center;}
    
-  .media-box-content.media-box-2col {
-    padding: 20px 12px 12px 12px;
-  }
+
 }
 
 /* UNORDERED LISTS */
@@ -265,12 +267,9 @@ strong {font-weight: 600;}
 
 .media-box-content {
    border:solid 1px #ddd;
-   padding: 20px 12px 12px 12px;
+   padding: 20px 32px 12px 32px;
 }
 
-.media-box-content.media-box-2col {
-  padding: 20px 22px 12px 22px;
-}
 
 .media-box-content img {margin-left:auto; margin-right:auto;}
 .media-box-content p {font-size:1.4rem;}

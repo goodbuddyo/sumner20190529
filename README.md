@@ -10,7 +10,7 @@ Here's a rundown on the updates:
 
 1 - remove the last &lt;div class="four columns"> ... &lt;/div>
 
-2 - change the other 2 divs in that row to "six columns"
+2 - change the other 2 divs in that row to "six columns" and  nest another row div  under the h2 containing a five col div (for the image)  and a seven col div (for the text)
 
 3 - copy the &lt;p style="padding:20px 0 0 0;" class="center">&lt;mg>...&lt;/p> from the top hero area and paste below each of the lower 5 media-box &lt;h2> tags
 
@@ -24,7 +24,7 @@ Here's a rundown on the updates:
 5 - for semantics update the 5 lower  &lt;p> tags images from 
 &lt;p style="padding:20px 0 0 0;" class="center">...&lt;/p>
 to
-&lt;figure style="padding:10px 20px 0 20px;" class="center">.&lt;/figure>
+&lt;figure style="padding:20px 36px 0 36px;"  class="center">...&lt;/figure>
 and add 
 &lt;figcaption> 
 tags to credit the artists
@@ -34,25 +34,9 @@ tags to credit the artists
 6 - Add a class to the media-box &lt;H2> tags to make them stand out more
  &lt;h2 class="text21">5 Easy Steps&lt;/h2>
 
- 7 - Since the added width of the bottom two media-boxes makes the &lt;p> text look odd, increase the left and right padding of the media boxes - add a media-box-2col class to those two boxes 
- &lt;div class="media-box-content media-box-2col">
+ 7 - Since 2 col media-boxes needs some different styling than the 3 col media boxes,  
+  add a new style to main.css (or in a local &lt;style> tag until this gets approved for main.css)
 
- and add a new style to main.css (or in a local &lt;style> tag until this gets approved for main.css)
-
-  .media-box-content.media-box-2col {
-    padding: 20px 22px 12px 22px;
-  }
-
-8 -  In the media query for mobile, make the padding for these bottom two media-boxes match the padding of the other 3, 
-
-  /* Smaller than mobile */
-  @media (max-width: 550px) {
-    .mobile-center {text-align:center;}
-    
-    .media-box-content.media-box-2col {
-      padding: 20px 12px 12px 12px;
-    }
-  }
 --------------------------
 
 
