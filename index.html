@@ -1,224 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<!--- Basic Page Needs  --->
-<meta charset="utf-8">
-<TITLE>BYO Newtown</TITLE>
-<META NAME="Description" CONTENT="" />
-<META NAME="Keywords" CONTENT="" />
-<!--- Mobile Specific Metas --->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<!--- HTML5shiv.js enables use of HTML5 sectioning elements in legacy IE and provides  basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x. --->
-<!--- Respond.min.js enables responsive web designs in browsers that don't support CSS3 Media Queries - in particular, Internet Explorer 8 and under.--->
-<!---[if lt IE 9]>
+  <head>
+    <!--- Basic Page Needs  --->
+    <meta charset="utf-8" />
+    <TITLE>BYO Newtown</TITLE>
+    <META NAME="Description" CONTENT="" />
+    <META NAME="Keywords" CONTENT="" />
+    <!--- Mobile Specific Metas --->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!--- HTML5shiv.js enables use of HTML5 sectioning elements in legacy IE and provides  basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x. --->
+    <!--- Respond.min.js enables responsive web designs in browsers that don't support CSS3 Media Queries - in particular, Internet Explorer 8 and under.--->
+    <!---[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif] --->
-        
-<!--- FONTS --->
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,800' rel='stylesheet' type='text/css'>
-        
-<!--- AWESOME FONT icons --->
-<link rel="stylesheet" href="css/font-awesome.min.css">
-        
-<!--- CSS --->
-<link rel="stylesheet" href="css/reset-skeleton.css">
-<link rel="stylesheet" href="css/slick-plus-theme.css">
-<link rel="stylesheet" href="css/responsive-nav.css">
-<link rel="stylesheet" href="css/main.css">
 
-<!--- JAVASCRIPT --->
-<script src="js/modernizr-2.6.2.min.js"></script>
-<script src="js/responsive-nav.min.js"></script>
+    <!--- FONTS --->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
 
+    <!--- AWESOME FONT icons --->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
 
+    <!--- CSS --->
+    <link rel="stylesheet" href="css/reset-skeleton.css" />
+    <link rel="stylesheet" href="css/slick-plus-theme.css" />
+    <link rel="stylesheet" href="css/responsive-nav.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-<!--- FAVICON --->
-<link rel="icon" type="image/png" href="favicon.ico" />
+    <!--- JAVASCRIPT --->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/responsive-nav.min.js"></script>
 
-<!--- Google Webmaster Tools Code --->
+    <!--- FAVICON --->
+    <link rel="icon" type="image/png" href="favicon.ico" />
 
-<!--- JQUERY --->
-<script src="js/jquery-v3.2.1.min.js"></script>
+    <!--- Google Webmaster Tools Code --->
 
-<script>
-  $(document).ready(function() {
-      $('#header').load('header.html', function(){             
+    <!--- JQUERY --->
+    <script src="js/jquery-v3.2.1.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#header").load("header.html", function() {});
       });
-  });
-  $(document).ready(function() {
-    $('#footer').load('footer.html', function(){             
-    });
-  });
-</script>
+      $(document).ready(function() {
+        $("#footer").load("footer.html", function() {});
+      });
+    </script>
 
-  <!--- SCRIPT TO HIDE / SHOW A SECTION 
+    <!--- SCRIPT TO HIDE / SHOW A SECTION 
 ************************************** --->
-<script type="text/javascript">
-  $(document).ready(function(){
-  //On Click
-  $('.acc_trigger').click(function(){
-  
-    if( $(this).next().is(':hidden') ) { // If the immediate next container with the drop down content is hidden
-      $(this).addClass('active').next().slideDown(); // Add the active class and expand the immediate next container
-      $(this).children('.fa').removeClass('fa-chevron-circle-right').addClass('fa-chevron-circle-down');
-    } else {
-      $(this).removeClass('active').next().slideUp(); // Otherwise, remove the active class, collapse the next container
-      $(this).children('.fa').addClass('fa-chevron-circle-right').removeClass('fa-chevron-circle-down');
-    }
-    return false; //Prevent the browser jump to the link anchor  
-  });
-  // This should work with old versions of IE too
-  var w = window.innerWidth
-  || document.documentElement.clientWidth
-  || document.body.clientWidth;
-  
-  if( w < 600) {
-    $('.acc_container').hide(); // Hide all containers below 600
-  } else {
-    $('.acc_container').show(); // Show all containers above 600
-    $('.acc_trigger').children('.fa').removeClass('fa-chevron-circle-right'); // Hide the icons initially 
-  }
-    return false; //Prevent the browser jump to the link anchor
-  });
-</script> <!--- END SCRIPT TO HIDE / SHOW SECTION --->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //On Click
+        $(".acc_trigger").click(function() {
+          if (
+            $(this)
+              .next()
+              .is(":hidden")
+          ) {
+            // If the immediate next container with the drop down content is hidden
+            $(this)
+              .addClass("active")
+              .next()
+              .slideDown(); // Add the active class and expand the immediate next container
+            $(this)
+              .children(".fa")
+              .removeClass("fa-chevron-circle-right")
+              .addClass("fa-chevron-circle-down");
+          } else {
+            $(this)
+              .removeClass("active")
+              .next()
+              .slideUp(); // Otherwise, remove the active class, collapse the next container
+            $(this)
+              .children(".fa")
+              .addClass("fa-chevron-circle-right")
+              .removeClass("fa-chevron-circle-down");
+          }
+          return false; //Prevent the browser jump to the link anchor
+        });
+        // This should work with old versions of IE too
+        var w =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
 
-<!--- Custom CSS --->
-<style type="text/css">
-  .tb-padding-10 { display:flex; flex-wrap:wrap; }
-  .tb-padding-10 .columns { display:flex;  }
-  .media-content-box {display:flex; }
-  .media-box-content { padding: 16px 20px 20px 20px; }
-  .row.tb-padding-10  .six.columns { display: flex; }
-  .tb-padding-10  figcaption {font-size: 1.3rem}
-</style>
-<!--- end custom css --->
+        if (w < 600) {
+          $(".acc_container").hide(); // Hide all containers below 600
+        } else {
+          $(".acc_container").show(); // Show all containers above 600
+          $(".acc_trigger")
+            .children(".fa")
+            .removeClass("fa-chevron-circle-right"); // Hide the icons initially
+        }
+        return false; //Prevent the browser jump to the link anchor
+      });
+    </script>
+    <!--- END SCRIPT TO HIDE / SHOW SECTION --->
 
-</head>
+    <!--- Custom CSS --->
+    <style type="text/css">
+      .byo-nt .tb-padding-10 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .byo-nt .tb-padding-10 .columns {
+        display: flex;
+      }
+      .byo-nt .media-content-box {
+        display: flex;
+      }
+      .byo-nt .media-box-content {
+        padding: 16px 20px 20px 20px;
+      }
+      .byo-nt p {
+        padding: 6px 10px 10px 10px;
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 150%;
+      }
+      .row.tb-padding-10 .six.columns {
+        display: flex;
+      }
+      .tb-padding-10 figcaption {
+        font-size: 1.3rem;
+      }
+    </style>
+    <!--- end custom css --->
+  </head>
 
-<body>
-<!--- _________________________________ BODY _________________________________ --->
+  <body>
+    <!--- _________________________________ BODY _________________________________ --->
 
-<div id="header"></div>
+    <div id="header"></div>
 
-<!--- HERO SECTION --->
-<div class="container">
+    <!--- HERO SECTION --->
+    <div class="container byo-nt">
+      <!-- ROW 1 HERO SECTION -->
+      <section class="row">
+        <!-- HERO IMAGE -->
+        <div class="four columns offset-by-one">
+          <p style="padding:20px 0 0 0;" class="center">
+            <img class="u-max-full-width" src="img/earth-hero2.jpg" />
+          </p>
+        </div>
+        <!--- end hero column --->
 
-  <!-- ROW 1 HERO SECTION -->
-  <section class="row">
-    <!-- HERO IMAGE -->
-    <div class="four columns offset-by-one">
-      <p style="padding:20px 0 0 0;" class="center">
-        <img class="u-max-full-width"  src="img/earth-hero2.jpg">
-      </p>
-    </div><!--- end hero column --->
-    
-    <!-- INTRO CONTENT -->
-    <div class="six columns hero-text-column">
-      <p><strong>Welcome to BYONewtown</strong>, website of Newtown Environmental Action Team (NEAT).</p>
-      
-      <p><strong>NEAT is</strong> a nonpartisan grassroots group of Newtown, CT citizens who work together on smart solutions to environmental challenges.</p>
-      
-      <p>Take a look around the site to see what we're working on. If you see any projects you'd like to be a part of, let us know. We'd love to have you on our team!</p>
-    </div> <!-- end intro column -->
-  </section> <!-- end row 1 hero section -->
+        <!-- INTRO CONTENT -->
+        <div class="six columns hero-text-column">
+          <p>
+            <strong>Welcome to BYONewtown</strong>, website of Newtown
+            Environmental Action Team (NEAT).
+          </p>
 
-</div> <!--- end hero container -->
+          <p>
+            <strong>NEAT is</strong> a nonpartisan grassroots group of Newtown,
+            CT citizens who work together on smart solutions to environmental
+            challenges.
+          </p>
 
-<!-- PROJECTS DIVIDER -->  
-<div class="section-header bg-dark-blue">
-Environmental Projects
-</div> <!-- end full wrapper --->
-
-<!-- MEDIA BLOCKS -->
-<section class="container">   
-   
-  <!-- ROW 1 -->
-  <div class="row tb-padding-10">
-  
-    <div class="four columns">
-      <div class="media-box-content">
-          <h2 class="text21">Plastic Bag Ordinance</h2>
-        <figure style="padding:20px 36px 0 36px;" class="center">
-          <img class="u-max-full-width"  src="img/Erin-Weiss.jpg">
-          <figcaption>Art by:  Erin Weiss </figcaption>
-        </figure>
-        <p>Cities, states, and countries around the world are banning certain plastic bags. Find out why, and see what Newtown is doing.
-        </p>
-      </div>
+          <p>
+            Take a look around the site to see what we're working on. If you see
+            any projects you'd like to be a part of, let us know. We'd love to
+            have you on our team!
+          </p>
+        </div>
+        <!-- end intro column -->
+      </section>
+      <!-- end row 1 hero section -->
     </div>
-    
-    <div class="four columns">
-      <div class="media-box-content">
-        <h2 class="text21">"In The Bag" Art Exhibit</h2>
-        <figure style="padding:20px 36px 0 36px;" class="center">
-          <img class="u-max-full-width"  src="img/Samantha-Hoffert.jpg">
-          <figcaption>Art by:  Samantha Hoffert  </figcaption>
-        </figure>
-        <p>Follow the art and politics of the reusable bag movement around the world.<br> September 8 - 30, 2018.
-        </p>
-      </div>
+    <!--- end hero container -->
+
+    <!-- PROJECTS DIVIDER -->
+    <div class="section-header bg-dark-blue">
+      Environmental Projects
     </div>
-    <div class="four columns">
-      <div class="media-box-content">
-        <h2 class="text21">Newtown Reusable Bag</h2>
-        <figure style="padding:20px 36px 0 36px;" class="center">
-          <img class="u-max-full-width"  src="img/Caleigh-Ward.jpg">
-          <figcaption class="">Art by: Caleigh Ward </figcaption>  
-        </figure>
-        <p>NEAT and Newtown Parks & Recreation held a reusable bag design contest for Newtown kids. We have our winner!
-        </p>
-      </div>
-    </div>
-    
-   </div> <!-- end row 1 -->
-   
-   <!-- ROW 2 -->
-   <div class="row tb-padding-10">
-     <div class="six columns">
-      <div class="media-box-content ">
-          <h2 class="text21">Recycling in Schools</h2>
-          <div class="row">
-            <div class="five columns">
-            <figure style="padding:20px 10px 0 0px;" class="center">
-              <img class="u-max-full-width" src="img/Steven-Vournazos.jpg">
-              <figcaption>Art by:  Steven Vournazos </figcaption> 
+    <!-- end full wrapper --->
+
+    <!-- MEDIA BLOCKS -->
+    <section class="container  byo-nt">
+      <!-- ROW 1 -->
+      <div class="row tb-padding-10">
+        <div class="four columns">
+          <div class="media-box-content">
+            <h2 class="text21">Plastic Bag Ordinance</h2>
+            <figure style="padding:20px 36px 0 36px;" class="center">
+              <img class="u-max-full-width" src="img/Erin-Weiss.jpg" />
+              <figcaption>Art by: Erin Weiss</figcaption>
             </figure>
-            </div>
-            <div class="seven columns">
-              <p> It's time to teach our kids the importance of recycling. NEAT is working with HRRA to bring recycling into Newtown schools.
-              </p>
-            </div>
+            <p>
+              Cities, states, and countries around the world are banning certain
+              plastic bags. Find out why, and see what Newtown is doing.
+            </p>
           </div>
+        </div>
 
-      </div>
-    </div>
-    
-    <div class="six columns">
-      <div class="media-box-content ">
-        <h2 class="text21">5 Easy Steps</h2>
-        <div class="row">
-          <div class="five columns">
-            <figure style="padding:20px 10px 0 0px;" class="center">
-              <img class="u-max-full-width"  src="img/Allison-Holden.jpg">
-              <figcaption class="">Art by:  Allison Holden  </figcaption>  
+        <div class="four columns">
+          <div class="media-box-content">
+            <h2 class="text21">"In The Bag" Art Exhibit</h2>
+            <figure style="padding:20px 36px 0 36px;" class="center">
+              <img class="u-max-full-width" src="img/Samantha-Hoffert.jpg" />
+              <figcaption>Art by: Samantha Hoffert</figcaption>
             </figure>
+            <p>
+              Follow the art and politics of the reusable bag movement around
+              the world.<br />
+              September 8 - 30, 2018.
+            </p>
           </div>
-          <div class="seven columns">
-            <p> Our society produces so much trash that it has become toxic and expensive to manage. It's time to change that.
+        </div>
+        <div class="four columns">
+          <div class="media-box-content">
+            <h2 class="text21">Newtown Reusable Bag</h2>
+            <figure style="padding:20px 36px 0 36px;" class="center">
+              <img class="u-max-full-width" src="img/Caleigh-Ward.jpg" />
+              <figcaption class="">Art by: Caleigh Ward</figcaption>
+            </figure>
+            <p>
+              NEAT and Newtown Parks & Recreation held a reusable bag design
+              contest for Newtown kids. We have our winner!
             </p>
           </div>
         </div>
       </div>
-    </div>
-   </div> <!--- end row --->
+      <!-- end row 1 -->
 
-</section> <!-- end main container -->
-<!--- END OF BODY CONTENT --->
+      <!-- ROW 2 -->
+      <div class="row tb-padding-10">
+        <div class="six columns">
+          <div class="media-box-content ">
+            <h2 class="text21">Recycling in Schools</h2>
+            <div class="row">
+              <div class="six columns">
+                <figure style="padding:16px 10px 0 0px;" class="center">
+                  <img
+                    class="u-max-full-width"
+                    src="img/Steven-Vournazos.jpg"
+                  />
+                  <figcaption>Art by: Steven Vournazos</figcaption>
+                </figure>
+              </div>
+              <div class="six columns">
+                <p>
+                  It's time to teach our kids the importance of recycling. NEAT
+                  is working with HRRA to bring recycling into Newtown schools.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<div id="footer"></div>
+        <div class="six columns">
+          <div class="media-box-content ">
+            <h2 class="text21">5 Easy Steps</h2>
+            <div class="row">
+              <div class="six columns">
+                <figure style="padding:16px 10px 0 0px;" class="center">
+                  <img class="u-max-full-width" src="img/Allison-Holden.jpg" />
+                  <figcaption class="">Art by: Allison Holden</figcaption>
+                </figure>
+              </div>
+              <div class="six columns">
+                <p>
+                  Our society produces so much trash that it has become toxic
+                  and expensive to manage. It's time to change that.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- end row --->
+    </section>
+    <!-- end main container -->
+    <!--- END OF BODY CONTENT --->
 
-<!--- _______________________________ END BODY _______________________________ --->
+    <div id="footer"></div>
 
-</body>
+    <!--- _______________________________ END BODY _______________________________ --->
+  </body>
 </html>

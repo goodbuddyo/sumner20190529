@@ -39,7 +39,6 @@ tags to credit the artists
 
 --------------------------
 
-
 Some minor tweaks: 
 the padding-bottom of the media-boxes seems a little tight.
 I added 8 pixels with an inline &lt;style> tag
