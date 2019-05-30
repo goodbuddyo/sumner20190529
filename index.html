@@ -31,19 +31,7 @@
 <script src="js/modernizr-2.6.2.min.js"></script>
 <script src="js/responsive-nav.min.js"></script>
 
-<style>
 
-.tb-padding-10 { display:flex; flex-wrap:wrap; }
-.tb-padding-10 .columns { display:flex;  }
-.media-content-box {display:flex; }
-.media-box-content { padding: 16px 20px 20px 20px; }
-.row.tb-padding-10  .six.columns { display: flex; }
-.tb-padding-10  figcaption {font-size: 1.3rem}
-
-
-
-
-</style>
 
 <!--- FAVICON --->
 <link rel="icon" type="image/png" href="favicon.ico" />
@@ -53,51 +41,56 @@
 <!--- JQUERY --->
 <script src="js/jquery-v3.2.1.min.js"></script>
 
- <script>
-    $(document).ready(function() {
-        $('#header').load('header.html', function(){             
-        });
-    });
-    $(document).ready(function() {
-      $('#footer').load('footer.html', function(){             
+<script>
+  $(document).ready(function() {
+      $('#header').load('header.html', function(){             
       });
+  });
+  $(document).ready(function() {
+    $('#footer').load('footer.html', function(){             
     });
- </script>
+  });
+</script>
 
   <!--- SCRIPT TO HIDE / SHOW A SECTION 
 ************************************** --->
 <script type="text/javascript">
-        $(document).ready(function(){
-        //On Click
-        $('.acc_trigger').click(function(){
-        
-          if( $(this).next().is(':hidden') ) { // If the immediate next container with the drop down content is hidden
-            $(this).addClass('active').next().slideDown(); // Add the active class and expand the immediate next container
-            $(this).children('.fa').removeClass('fa-chevron-circle-right').addClass('fa-chevron-circle-down');
-          } else {
-            $(this).removeClass('active').next().slideUp(); // Otherwise, remove the active class, collapse the next container
-            $(this).children('.fa').addClass('fa-chevron-circle-right').removeClass('fa-chevron-circle-down');
-          }
-          return false; //Prevent the browser jump to the link anchor  
-        });
-        // This should work with old versions of IE too
-        var w = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
-        
-        if( w < 600) {
-          $('.acc_container').hide(); // Hide all containers below 600
-        } else {
-          $('.acc_container').show(); // Show all containers above 600
-          $('.acc_trigger').children('.fa').removeClass('fa-chevron-circle-right'); // Hide the icons initially 
-        }
-          return false; //Prevent the browser jump to the link anchor
-        });
+  $(document).ready(function(){
+  //On Click
+  $('.acc_trigger').click(function(){
+  
+    if( $(this).next().is(':hidden') ) { // If the immediate next container with the drop down content is hidden
+      $(this).addClass('active').next().slideDown(); // Add the active class and expand the immediate next container
+      $(this).children('.fa').removeClass('fa-chevron-circle-right').addClass('fa-chevron-circle-down');
+    } else {
+      $(this).removeClass('active').next().slideUp(); // Otherwise, remove the active class, collapse the next container
+      $(this).children('.fa').addClass('fa-chevron-circle-right').removeClass('fa-chevron-circle-down');
+    }
+    return false; //Prevent the browser jump to the link anchor  
+  });
+  // This should work with old versions of IE too
+  var w = window.innerWidth
+  || document.documentElement.clientWidth
+  || document.body.clientWidth;
+  
+  if( w < 600) {
+    $('.acc_container').hide(); // Hide all containers below 600
+  } else {
+    $('.acc_container').show(); // Show all containers above 600
+    $('.acc_trigger').children('.fa').removeClass('fa-chevron-circle-right'); // Hide the icons initially 
+  }
+    return false; //Prevent the browser jump to the link anchor
+  });
 </script> <!--- END SCRIPT TO HIDE / SHOW SECTION --->
 
 <!--- Custom CSS --->
 <style type="text/css">
-
+  .tb-padding-10 { display:flex; flex-wrap:wrap; }
+  .tb-padding-10 .columns { display:flex;  }
+  .media-content-box {display:flex; }
+  .media-box-content { padding: 16px 20px 20px 20px; }
+  .row.tb-padding-10  .six.columns { display: flex; }
+  .tb-padding-10  figcaption {font-size: 1.3rem}
 </style>
 <!--- end custom css --->
 
@@ -150,7 +143,6 @@ Environmental Projects
           <img class="u-max-full-width"  src="img/Erin-Weiss.jpg">
           <figcaption>Art by:  Erin Weiss </figcaption>
         </figure>
-        
         <p>Cities, states, and countries around the world are banning certain plastic bags. Find out why, and see what Newtown is doing.
         </p>
       </div>
@@ -174,7 +166,6 @@ Environmental Projects
           <img class="u-max-full-width"  src="img/Caleigh-Ward.jpg">
           <figcaption class="">Art by: Caleigh Ward </figcaption>  
         </figure>
-          
         <p>NEAT and Newtown Parks & Recreation held a reusable bag design contest for Newtown kids. We have our winner!
         </p>
       </div>
@@ -185,7 +176,7 @@ Environmental Projects
    <!-- ROW 2 -->
    <div class="row tb-padding-10">
      <div class="six columns">
-      <div class="media-box-content media-box-2col">
+      <div class="media-box-content ">
           <h2 class="text21">Recycling in Schools</h2>
           <div class="row">
             <div class="five columns">
@@ -196,26 +187,15 @@ Environmental Projects
             </div>
             <div class="seven columns">
               <p> It's time to teach our kids the importance of recycling. NEAT is working with HRRA to bring recycling into Newtown schools.
-                  
               </p>
             </div>
           </div>
 
-
-
-        <!-- <h2 class="text21">Recycling in Schools</h2>
-        <figure style="padding:10px 30px 0 30px;" class="center">
-          <img class="u-max-full-width"  src="img/Steven-Vournazos.jpg">
-          <figcaption>Art by:  Steven Vournazos  </figcaption>
-        </figure>
-        
-        <p > It's time to teach our kids the importance of recycling. NEAT is working with HRRA to bring recycling into Newtown schools.
-        </p> -->
       </div>
     </div>
     
     <div class="six columns">
-      <div class="media-box-content media-box-2col">
+      <div class="media-box-content ">
         <h2 class="text21">5 Easy Steps</h2>
         <div class="row">
           <div class="five columns">
@@ -226,7 +206,6 @@ Environmental Projects
           </div>
           <div class="seven columns">
             <p> Our society produces so much trash that it has become toxic and expensive to manage. It's time to change that.
-                
             </p>
           </div>
         </div>
